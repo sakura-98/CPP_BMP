@@ -1,9 +1,9 @@
-test: test.o BMP.o
+main: main.o BMP.o
 	g++ test.o BMP.o -o main
 	./test
-test.o: test.cpp BMP.h
-	g++ -Wall -c test.cpp 
+main.o: main.cpp BMP.h
+	g++ -Wall -c main.cpp 
 BMP.o: BMP.cpp BMP.h
 	g++ -Wall -c BMP.cpp
 clean:
-	rm -rf *.o
+	rm -rf *.o main
